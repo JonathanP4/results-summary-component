@@ -1,0 +1,31 @@
+@use 'variables' as *;
+
+@mixin slateBlueGradient($deg: 90deg) {
+   background: linear-gradient($deg,
+         map-get($gradients, 'light-slate-blue'),
+         map-get($gradients, 'light-royal-blue'));
+}
+
+@mixin violetBlueGradient($deg: 90deg) {
+   background: linear-gradient($deg,
+         map-get($gradients, 'violet-blue'),
+         map-get($gradients, 'persian-blue'));
+}
+
+@mixin flex($align: center, $justify: center) {
+   display: flex;
+   align-items: $align;
+   justify-content: $justify;
+}
+
+@mixin grid($align: center, $justify: center) {
+   display: grid;
+   align-items: $align;
+   justify-items: $justify;
+}
+
+@mixin desktop($width) {
+   @media (min-width: $width) {
+      @content;
+   }
+}

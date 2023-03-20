@@ -1,0 +1,35 @@
+@use '../variables' as *;
+
+@each $key,
+$val in $primary {
+   .text-#{$key} {
+      color: $val;
+   }
+
+   .bg-#{$key} {
+      background-color: $val;
+   }
+}
+
+@each $key,
+$val in $neutral {
+   .text-#{$key} {
+      color: $val;
+   }
+
+   .bg-#{$key} {
+      background-color: $val;
+   }
+}
+
+.normal {
+   font-weight: 500;
+}
+
+.bold {
+   font-weight: 600;
+}
+
+.bolder {
+   font-weight: 700;
+}
